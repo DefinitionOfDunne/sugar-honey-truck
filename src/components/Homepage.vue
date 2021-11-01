@@ -24,11 +24,11 @@
                         <b-navbar-nav class="ml-auto">
                             <b-nav-item href="#">Home</b-nav-item>
                             <b-nav-item  href="#products-wrapper">Our Products</b-nav-item>
-                            <b-nav-item  href="#contact-wrapper">Order Inquiry</b-nav-item>
-                            <b-nav-item  href="#contact-wrapper">
+                            <b-nav-item  href="#order">Order Inquiry</b-nav-item>
+                            <b-nav-item  href="#order">
                             <router-link to="/events">Special Events</router-link>
                             </b-nav-item>
-                            <b-nav-item  href="#contact-wrapper">
+                            <b-nav-item  href="#order">
                             <router-link to="/allergens">Allergens</router-link>
                             </b-nav-item>
                             
