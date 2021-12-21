@@ -2,13 +2,7 @@
     <div id="order">
         <form id="contact">
             <h3>Submit An Order Request</h3>
-            <h4>Please note, this is not an official order. One of us will contact you within 48 hours to finalize your order! <br><br> Please allow a minimum of 2 weeks for custom orders. </h4>
-            <div class="presale-cb-div">
-                <b-form-group v-slot="{ ariaDescribedby }">
-                    <b-form-radio v-model="orderType" :aria-describedby="ariaDescribedby" name="some-radios" value="presale">Autumn Holiday Presale</b-form-radio>
-                    <b-form-radio v-model="orderType" :aria-describedby="ariaDescribedby" name="some-radios" value="standard">Standard Order</b-form-radio>
-                </b-form-group>
-            </div>
+            <h4>Please note, this is not an official order. You will be contacted within 48 hours to finalize your order! <br><br> Please allow a minimum of 2 weeks for custom orders. </h4>
             <p v-if="orderType == 'presale'" class="presale-text">Each Autumn Holiday Presale Box Includes:</p>
                 <ul v-if="orderType == 'presale'" class="presale-products">
                     <li>2 Sugar Honey </li>
@@ -44,7 +38,7 @@
                 </select>
             </div>
             <fieldset>
-                <input v-model="from_email" placeholder="Your Email Address" type="email" tabindex="2" required @blur="validateEmail">
+                <input v-model="from_email" placeholder="Your Email Address" type="email" tabindex="2" required @change="validateEmail">
                 <span class="floating-placeholder" v-if="msg">{{msg}} </span>
             </fieldset>
             <fieldset>
@@ -98,7 +92,7 @@ export default {
             pickup_selection: '',
             amount_selection: '',
             msg: '',
-            orderType: 'presale'
+            orderType: 'standard'
         }
     },
     methods: {
@@ -145,7 +139,7 @@ export default {
         },
 
         submitPresaleOrder(name, email, phone, amount, pickup) {
-            if (name == "" || email == "" || phone == "" || amount == "" || pickup == "") {
+            if (name == "" || email == "" || phone == "" || amount == "" || pickup == "" || this.msg != '') {
                 this.showAlert()
                 return
             }
@@ -163,8 +157,6 @@ export default {
                 }, (error) => {
                     console.log('FAILED...', error);
                 });
-
-            console.log(templateParams)
 
             // Reset form field
             this.from_name = ''

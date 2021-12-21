@@ -1,28 +1,11 @@
 <template>
     <div id="app">
         <router-view />
-        <div id="overlay-wrapper">
-            <div id="presale-overlay">
-                <div id="x-button" @click="destroyOverlay()">&#x2715;</div>
-                <p class="presale-header">Sugar Honey's Autumn Presale Is Now Open!</p>
-                <p class="presale-header2">Accepting orders through Wednesday, Nov. 17th!</p>
-                <p class="presale-text">Pickup locations at Sugar Honey's first truck appearances <br> at The Congregation in Detroit and Drifter Coffee in Ferndale!</p>
-                <p class="presale-text">Each Autumn Holiday Presale Box is $36 & Includes:</p>
-                <ul class="presale-products">
-                    <li>2 Sugar Honey </li>
-                    <li>2 Blood Orange Honey Caramel </li>
-                    <li>2 Dirty Chai Tea </li>
-                    <li>2 Pumpkin Brown Butter </li>
-                    <li>2 Cranberry Sage </li>
-                    <li>2 Peach Old Fashion | Non-Dairy </li>
-                </ul>
-                <p class="presale-text">Use our Order Form below and select Autumn Presale to order up to 10 boxes today!</p>
-                <b-button squared id='overlay-button' @click="destroyOverlay()" href="#order">Order Now!</b-button>
-            </div>
-        </div>
     </div>
 </template>
 <script>
+
+
 //import Homepage from './components/Homepage.vue'
 import Vue from 'vue'
 import VueRouter from 'vue-router'
@@ -121,6 +104,10 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
+
+    #presale-overlay {
+        margin-top: 20px;
+    }
 
     .presale-header {
         font-size: 1rem;

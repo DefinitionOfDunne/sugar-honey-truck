@@ -24,8 +24,9 @@
             </div>
         </header>
         <h1 id="products-title">Ingredients & Allergens</h1>
+
         <ProductDescription 
-        productName="Sugar Honey" 
+        productName="Signature Sugar Honey" 
         productImage="Sugar-Honey.png"
         v-bind:ingredients="['Natural Almond Flour Shell', 'Gold Leaf', 'Brown Butter Buttercream', 'Salted Honey Caramel']">
         </ProductDescription>
@@ -33,12 +34,6 @@
         <ProductDescription productName="Vanilla Cream" 
         productImage="Vanilla-Cream.png"
         v-bind:ingredients="['Spirulina Dyed Shell', 'Natural Dyed Sprinkles', 'Vanilla Bean Buttercream', 'Toasted Sugar Custard']">
-        </ProductDescription>
-
-        <ProductDescription 
-        productName="Cocoa Malt" 
-        productImage="Chocolate-Malt.png"
-        v-bind:ingredients="['Alkalized Cocoa Shell', 'Malted Dark Cocoa Buttercream', 'Milk Chocolate Ganache']">
         </ProductDescription>
 
         <ProductDescription productName="Raspberry Pistachio" 
@@ -58,45 +53,41 @@
         v-bind:ingredients="['Cherry Powder Shell', 'Toasted Poppy Seed', 'Almond Poppyseed Buttercream' , 'Michigan Dried Cherry Jam']">
         </ProductDescription>
 
-        <!-- seasonals -->
-        <ProductDescription productName="Caramel Apple" 
-        productImage="CaramelApple.png"
-        v-bind:ingredients="['Green Spirulina/Beta Carotene', 'Cinnamon Honey Caramel Buttercream', 'Caramel Apple Butter', 'Chocolate Dip', 'Salted Honey Peanuts']">
-        </ProductDescription>
-
-        <ProductDescription productName="Pumpkin Brown Butter" 
-        productImage="Pumpkin-BB.png"
-        v-bind:ingredients="['Beta Carotene', 'Brown Butter Buttercream', 'Pecan Struesel', 'Spiced Pumpkin Ganache']">
-        </ProductDescription>
-
-
-        <ProductDescription productName="Peach Old Fashioned | Non-Dairy" 
-        productImage="PeachOF.png"
-        v-bind:ingredients="['Beta Carotene', 'Bourbon Infused Georgia Peach Buttercream', 'Michigan Dried Cherry Jam']">
-        </ProductDescription>
-
-
-        <ProductDescription productName="Dirty Chai Tea" 
-        productImage="ChaiTea.png"
-        v-bind:ingredients="['Espresso Chai Spice Shell', 'Espresso Buttercream', 'Chai Spice Mascarpone Cream']">
-        </ProductDescription>
-
-
-        <ProductDescription productName="Blood Orange Honey Caramel" 
-        productImage="BOHC.png"
-        v-bind:ingredients="['Beta Carotene/Beet Root', 'Honey Caramel Buttercream', 'Blood Orange Citrus Jam']">
-        </ProductDescription>
-
-
-        <ProductDescription productName="Cranberry Sage" 
-        productImage="CranberrySage.png"
-        v-bind:ingredients="['Green Spirulina', 'Sage Cream Buttercream', 'Dried Cranberry Jam']">
-        </ProductDescription>
-
-
         <ProductDescription productName="Elderflower Citrus" 
         productImage="Elderflower-Cirus.png"
         v-bind:ingredients="['Goldenberry Shell', 'Edible Flower Petals', 'Citrus Buttercream', 'Grapefruit Elderflower Jam']">
+        </ProductDescription>
+
+        <!-- seasonals -->
+
+        <ProductDescription 
+        productName="Chocolate Truffle" 
+        productImage="Chocolate-Malt.png"
+        v-bind:ingredients="['Cocoa Shell', 'Semi-Sweet Chocolate Ganache', 'Salted Almond Gianduja']">
+        </ProductDescription>
+
+        <ProductDescription 
+        productName="Peppermint Mallow" 
+        productImage="Peppermint-Mallow.png"
+        v-bind:ingredients="['Sugar Crystals', 'Pink Peppermint Mallow Buttercream', 'Marshmallow Ganache']">
+        </ProductDescription>
+
+        <ProductDescription 
+        productName="Cranberry Cheesecake" 
+        productImage="Cran-Cheesecake.png"
+        v-bind:ingredients="['Natural Pink Shell', 'Cheesecake Buttercream', 'Sour Cranberry Jam']">
+        </ProductDescription>
+
+        <ProductDescription 
+        productName="Coconut Caramel | Non-Dairy" 
+        productImage="Coconut-Caramel.png"
+        v-bind:ingredients="['Toasted Coconut Shell', 'Coconut Buttercream', 'Spiced Date Caramel']">
+        </ProductDescription>
+
+        <ProductDescription 
+        productName="Vanilla Sugar Cookie" 
+        productImage="Van-Sugar-Cookie.png"
+        v-bind:ingredients="['Natural Green Sprinkle', 'Vanilla Bean Buttercream', 'Sweet Sugar Cookie Ganache']">
         </ProductDescription>
 
 

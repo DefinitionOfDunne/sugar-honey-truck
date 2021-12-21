@@ -5,33 +5,32 @@
     <img style="text-decoration: none;" src="images/envelope.png" width="30" height="20" /> 
     </a>
     </header> -->
-         <div class="top-bar">
+        <div class="top-bar">
             <p>THE BEST MOBILE MACARONS IN THE MITTEN!</p>
             <!-- <router-link to="/allergens">Go to Bar</router-link> -->
         </div>
         <header>
             <div>
-                <b-navbar toggleable="lg" type="light" >
+                <b-navbar toggleable="lg" type="light">
                     <b-navbar-nav>
-                            <ul class="">
-                                <li class="menu-item" id="nav-logo-container">
-                                    <img src="../assets/SUGAR-HONEY-SUB-LOGO-TRANSPARENT-01.png" class="logo-icon" />
-                                </li>
-                            </ul>
-                        </b-navbar-nav>
+                        <ul class="">
+                            <li class="menu-item" id="nav-logo-container">
+                                <img src="../assets/SUGAR-HONEY-SUB-LOGO-TRANSPARENT-01.png" class="logo-icon" />
+                            </li>
+                        </ul>
+                    </b-navbar-nav>
                     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
                     <b-collapse id="nav-collapse" is-nav>
                         <b-navbar-nav class="ml-auto">
                             <b-nav-item href="#">Home</b-nav-item>
-                            <b-nav-item  href="#products-wrapper">Our Products</b-nav-item>
-                            <b-nav-item  href="#order">Order Inquiry</b-nav-item>
-                            <b-nav-item  href="#order">
-                            <router-link to="/events">Special Events</router-link>
+                            <b-nav-item href="#products-wrapper" @click="resetUrl">About Us</b-nav-item>
+                            <b-nav-item href="#order" @click="resetUrl">Order Inquiry</b-nav-item>
+                            <b-nav-item>
+                                <router-link to="/events">Special Events</router-link>
                             </b-nav-item>
-                            <b-nav-item  href="#order">
-                            <router-link to="/allergens">Allergens</router-link>
+                            <b-nav-item>
+                                <router-link to="/allergens">Flavors</router-link>
                             </b-nav-item>
-                            
                         </b-navbar-nav>
                     </b-collapse>
                 </b-navbar>
@@ -41,7 +40,7 @@
         </div>
         <main-landing> </main-landing>
         <div id="order-breakpoint"></div>
-        <products> </products> 
+        <products> </products>
         <order-form></order-form>
         <footer></footer>
     </div>
@@ -55,7 +54,20 @@ export default {
     props: {
         msg: String
     },
+    methods: {
+        resetUrl() {
+            setTimeout(() => {
+                // call removeHash function after set timeout
+                this.removeHash();
+            }, 5); // 5 millisecond timeout in this case
+        },
 
+        // removeHash function
+        // uses HTML5 history API to manipulate the location bar
+        removeHash() {
+            history.replaceState('', document.title, window.location.origin + window.location.pathname + window.location.search + '#/');
+        }
+    },
     components: {
         OrderForm,
         MainLanding,
@@ -92,7 +104,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 1rem;
-    background-color: #F5F5F5!important;
+    background-color: #F5F5F5 !important;
     margin-top: 57px;
 }
 
